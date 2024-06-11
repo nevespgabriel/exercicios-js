@@ -1,4 +1,4 @@
-let aleatorio = Math.floor(Math.random() * 100);
+let aleatorio = 100 + Math.floor(Math.random() * 100);
 let numUsuario,
   repeticoes = 0;
 
