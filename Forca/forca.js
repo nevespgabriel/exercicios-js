@@ -1,5 +1,7 @@
 let palavras = ["Javascript", "Python", "PHP", "Ruby", "C", "C++", "C#", "Java", "Pascal", "Assembly"];
-const pal = palavras[Math.random*100 - (100 - palavras.length)];
+let pal = palavras[Math.random*100 - (100 - palavras.length)];
+pal = pal.split()
+console.log(pal)
 
 console.log("Digite a letra que deseja inserir na forca:\n");
 process.stdin.on("data", function(data){
