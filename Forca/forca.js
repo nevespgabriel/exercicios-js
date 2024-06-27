@@ -8,7 +8,6 @@ let pessoa = {
     pernaEsq: "/"
 }
 const indice = Math.floor(Math.random() * palavras.length);
-console.log(indice);
 let palSorteada = palavras[indice].split("");;
 let palAdivinhada = [];
 let entrada, retira;
@@ -25,7 +24,7 @@ process.stdin.on("data", function(data){
     for(let c=0; c<palSorteada.length;c++){
         if(entrada.toLowerCase() == palSorteada[c].toLowerCase()){
             retira = false;
-            palAdivinhada[c] = entrada + " ";
+            palAdivinhada[c] = palSorteada[c] + " ";
         }
     }
     if(retira){
@@ -35,8 +34,8 @@ process.stdin.on("data", function(data){
             pessoa.pernaEsq = "";
         } else if(pessoa.bracoDir){
             pessoa.bracoDir = "";
-        } else if(pessoa.bracoEsq){
-            pessoa.bracoEsq = "";
+        } else if(pessoa.bracoEsq != " "){
+            pessoa.bracoEsq = " ";
         } else if(pessoa.corpo){
             pessoa.corpo = ""
         } else{
