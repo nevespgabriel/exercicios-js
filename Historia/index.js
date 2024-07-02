@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')();
 
 let palavras = {};
-let hist = prompt("Conte uma história: ");
+let hist = prompt("Conte uma história: ").trim();
 hist = hist.replaceAll(",", "").replaceAll(".", "").split(" ");
 console.log(`A história contada possui ${hist.length} palavras`);
 
